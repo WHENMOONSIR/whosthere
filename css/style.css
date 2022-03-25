@@ -198,14 +198,14 @@ body {
   margin: 0px; }
 
 .main {
-  padding: 150px 0;
+  /*padding: 110px 0;*/
   position: relative; }
 
 @media screen and (min-width: 768px) {
   .himaster-title {
     text-align: center;
     font-size: 100px;
-    margin-top: -10%;
+    /*margin-top: -10%;*/
     margin-bottom: -2%;
     color:  #fff;
   }
@@ -215,7 +215,7 @@ body {
   .himaster-title {
     text-align: center;
     font-size: 50px;
-    margin-top: -10%;
+    /*margin-top: -25%;*/
     margin-bottom: -2%;
     color:  #fff;
   }
