@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pendataan Korsa Himaster</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <h2 class="himaster-title">HIMASTER</h2>
+        <div class="container">
+            <div class="sign-up-content">
+                <form name="submit-to-google-sheet" class="signup-form">
+                    <div style="text-align: center; vertical-align: center;">
+                        <div style="margin-right: 20%">
+                            <img src="images/axel.png" width="25%" height="25%">
+                        </div>
+
+                        <div style="margin-top: -27%; margin-left: 35%;">
+                           <img src="images/axel2.png" width="50%" height="50%">
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="form-title">Pendataan Ukuran Korsa HIMASTER</h2><hr>
+                    <center><p><font color="red">↓ Sneak Peek Korsa ↓</font></p></center>
+                    <!-- <center><p><font color="red">WEBSITENYA MASIH BETA YA GES YAAAAAA</font></p></center> -->
+                    <img src="images/korsa.jpeg" width="100%" height="100%">
+                    <center><p><font color="red">↑ Sneak Peek Korsa ↑</font></p></center>
+                    <hr>
+                     <h4>MAU ORDER APA?</h4>
+                    <div class="form-radio">
+                       
+                        <input type="radio" name="pesanan" value="newbie" id="newbie" checked="checked" />
+                        <label for="newbie">Korsa</label>
+                        <input type="radio" name="pesanan" value="average" id="average" />
+                        <label for="average">Badge</label>
+                    </div>
+                    <hr>
+                    <h4>ISI DATA DULU YAA SAYANG..</h4>
+                    <div class="form-textbox">
+                        <label for="namapanjang">Nama Lengkap :</label>
+                        <input type="text" name="namapanjang" id="namapanjang" placeholder="ex: MUHAMMAD AZZAM HILMY" />
+                    </div>
+                    <div class="form-textbox">
+                        <label for="namabadge">Nama Korsa :</label>
+                        <input type="text" name="namabadge" id="namabadge" placeholder="ex: ZAMHIL (Boleh Custom)" />
+                    </div>
+                    <div class="form-textbox">
+                        <label for="ukuran">Nama Bidang :</label>
+                        <input type="text" name="namabidang" id="ukuran" placeholder="ex: KL" />
+                    </div>
+                    <div class="form-textbox">
+                        <label for="name">Ukuran :</label>
+                        <input type="text" name="ukuran" id="name" placeholder="ex: M" />
+                    </div>
+                    <div class="form-textbox">
+                        <label for="name">Alamat Tujuan:</label>
+                        <input type="text" name="alamattujuan" id="name" placeholder="ex: PLANET NAMEK/COD" />
+                    </div>
+                    <hr>
+                    <h4>[INFORMASI]</h4>
+                    <h5>Korsa HIMASTER : 1 Kg<br>Badge : 0,1 Kg<br>Check Ongkir Di: <a href="https://www.jne.co.id/id/tracking/tarif">SINI<br></a>Pengiriman Dari JEBRES</h5>
+                    <div class="form-textbox">
+                        <label for="name">Ongkir :</label>
+                        <input type="text" name="ongkir" id="name" placeholder="ex: 0" />
+
+                    </div>
+                    <h5>Jika COD, Bisa Isi Dengan Angka 0</h5>
+                    <hr>
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>Data Yang Dimasukkan Sudah Benar  <!-- <a href="#" class="term-service">Terms of service</a> --></label>
+                    </div>
+
+                    <div class="form-textbox">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Submit Data" onclick="location.href='thankyou.html'"/>
+                    </div>
+                </form>
+
+                <p class="loginhere">
+                    Butuh Bantuan?<a href="https://wa.me/6287839159764" class="loginhere-link"> Tanyakan!</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwzXsqD3ySUgstOgT50RQW2XdY_iBPCQEQmjlkvZ1ZeNaMUv_5k7UE_7xNHnw5Se6ToJw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
